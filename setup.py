@@ -18,7 +18,7 @@ install_requires = [x.strip() for x in all_reqs if "git+" not in x]
 dependency_links = [x.strip().replace("git+", "") for x in all_reqs if x.startswith("git+")]
 
 setup(
-    name="databroker.NPYHandler",
+    name="databroker.commonHandler",
     version=__version__,
     description="",
     long_description=long_description,
@@ -37,7 +37,10 @@ setup(
     dependency_links=dependency_links,
     entry_points={
         "databroker.handlers": [
-            "NPY = file_handlers.npy_handler:NPYHandler",
+            "NPY = file_handlers.common_handler:NPYHandler",
+            "JPEG = file_handlers.common_handler:JPEGHandler",
+            "TIFF = file_handlers.common_handler:TIFFHandler",
+            "EDF = file_handlers.common_handler:EDFHandler",
         ],
     },
 )

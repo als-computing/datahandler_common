@@ -1,5 +1,5 @@
 import pytest 
-from .npy_handler import NPYHandler
+from .common_handler import NPYHandler
 import numpy as np
 
 class Image:
@@ -17,5 +17,3 @@ def test_handler():
     array = testFits()
 
     assert np.array_equal(image, array)
-
-
