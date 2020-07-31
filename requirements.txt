@@ -1,1 +1,5 @@
 numpy
+area_detector_handlers
+os
+PIL
+fabio
